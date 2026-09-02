@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Disaster Simulation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="title-screen">
+    <h1>Disaster Simulation</h1>
+    <p class="intro-text">Are you ready to face the disaster? What choices will you make to get out of this situation safely?</p>
+    <p class="bonus-text">Bonus: keep an eye on your safety stats. Your decisions will cost you.</p>
+    <button id="start-button">Start</button>
+  </div>
+
+  <div id="black-screen">
+    <div id="timer-display">3</div>
+  </div>
+
+  <video id="scene-video" playsinline></video>
+
+  <div id="safety-display">Safety: 100</div>
+
+  <div id="overlay">
+    <div id="scene-text"></div>
+    <div id="choices"></div>
+  </div>
+
+  <div id="review-overlay">
+    <div id="review-panel">
+      <h2>How You Did</h2>
+      <p id="review-performance"></p>
+      <h3>Recommended Guidelines</h3>
+      <ul id="review-guidelines"></ul>
+      <button id="review-close">Close</button>
+    </div>
+  </div>
+
+  <audio id="alert-sound" src="assets/alert.mp3" preload="auto"></audio>
+  <audio id="timer-sound" src="assets/timer-tick.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
