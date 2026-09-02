@@ -1,0 +1,130 @@
+{
+  "flood_01": {
+    "text": "Heavy rain has been falling for hours. Water is already pooling at the end of your street. Your phone buzzes with a Flash Flood Warning.",
+    "video": "assets/scene1.mp4",
+    "choices": [],
+    "next": "flood_02"
+  },
+  "flood_02": {
+    "text": "Your phone keeps buzzing with a Flash Flood Warning. What will you do?",
+    "video": "assets/scene2.mp4",
+    "choices": [
+      {
+        "label": "Leave immediately for higher ground",
+        "safetyDelta": -5,
+        "verdict": "correct",
+        "reason": "Evacuating immediately on a Flash Flood Warning matches official guidance.",
+        "next": "flood_03"
+      },
+      {
+        "label": "Wait and see if it gets worse",
+        "safetyDelta": -10,
+        "verdict": "risky",
+        "reason": "Hesitating during a Warning wastes critical time.",
+        "next": "flood_02"
+      }
+    ]
+  },
+  "flood_03": {
+    "text": "Water is rising over the curb and creeping toward your door. There is no time to waste. How will you evacuate?",
+    "video": "assets/scene3.mp4",
+    "choices": [
+      {
+        "label": "Take the car",
+        "safetyDelta": -20,
+        "verdict": "risky",
+        "reason": "Driving into floodwater is a leading cause of flood deaths.",
+        "next": "flood_04"
+      },
+      {
+        "label": "Go on foot toward higher ground",
+        "safetyDelta": -8,
+        "verdict": "correct",
+        "reason": "Going on foot is safer despite being slower.",
+        "next": "flood_05"
+      }
+    ]
+  },
+  "flood_04": {
+    "text": "You slide into the driver's seat and pull onto the road. The water looks shallow at first, so you start driving.",
+    "video": "assets/scene4.mp4",
+    "choices": [],
+    "next": "flood_06"
+  },
+  "flood_05": {
+    "text": "You run towards the higher ground. You can't rest yet — you need to reach some high place.",
+    "video": "assets/scene5.mp4",
+    "choices": [],
+    "next": "flood_07"
+  },
+  "flood_06": {
+    "text": "But the car begins to drift as your tires lose grip on the submerged asphalt. Without warning, the water surges higher, swallowing the hood of the car. The engine sputters and dies. You need to continue on foot.",
+    "video": "assets/scene6.mp4",
+    "choices": [],
+    "next": "flood_05"
+  },
+  "flood_07": {
+    "text": "Ahead, through the rain, a narrow bridge comes into view, crossing a channel of fast-moving water. On the other side, higher ground looks reachable. The bridge groans under the current. A longer path loops around it entirely. Which will you choose?",
+    "video": "assets/scene7.mp4",
+    "choices": [
+      {
+        "label": "Cross the bridge",
+        "safetyDelta": -30,
+        "verdict": "risky",
+        "reason": "Fast-moving water can wash out bridges without warning.",
+        "next": "flood_08"
+      },
+      {
+        "label": "Find a different route",
+        "safetyDelta": -5,
+        "verdict": "correct",
+        "reason": "Avoiding bridges over fast-moving water is the safer choice.",
+        "next": "flood_05b"
+      }
+    ]
+  },
+  "flood_08": {
+    "text": "You step onto the bridge. Halfway across, a section near the far end begins to crumble, water pouring through the gap. There is no alternative — you need to turn back and find another path.",
+    "video": "assets/scene8.mp4",
+    "choices": [],
+    "next": "flood_05b"
+  },
+  "flood_05b": {
+    "text": "You need to keep running to reach some safe place.",
+    "video": "assets/scene5.mp4",
+    "choices": [],
+    "next": "flood_09"
+  },
+  "flood_09": {
+    "text": "The flooded neighborhood stretches on with no clear end in sight. Water is now above your knees and rising rapidly. You reach a two-story building. Where will you go?",
+    "video": "assets/scene9.mp4",
+    "choices": [
+      {
+        "label": "Go inside and head to the highest floor",
+        "safetyDelta": -5,
+        "verdict": "correct",
+        "reason": "Getting to the highest level and signaling for help matches official guidance.",
+        "next": "flood_10"
+      },
+      {
+        "label": "Keep moving through the flooded neighborhood",
+        "safetyDelta": -20,
+        "verdict": "risky",
+        "reason": "Continuing through floodwater on foot is unpredictable and dangerous.",
+        "next": "flood_09"
+      }
+    ]
+  },
+  "flood_10": {
+    "text": "You head inside and climb to the highest floor, water rising below.",
+    "video": "assets/scene10.mp4",
+    "choices": [],
+    "next": "flood_11"
+  },
+  "flood_11": {
+    "text": "With your signal, rescue arrives. You made it out. You did well.",
+    "video": "assets/scene11.mp4",
+    "choices": [],
+    "ending": true
+  }
+}
